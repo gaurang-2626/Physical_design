@@ -28,3 +28,18 @@ VSD-IAT cloud platform was used to provide acess to lectures.
 This is arduino uno board,the encircled part is the processor which we are concerned about.
 we will be doing physical design of macro present inside the processor.(i.e)we will be implementing block level design.
 
+the image shown below shows the microcontroller board or PCB on which different components are placed.
+
+![Screenshot (545)](https://github.com/gaurang-2626/Physical_design/assets/175235170/d7773efb-b393-474f-925e-a7c01757e6ca)
+
+This image contains various interconnecting devices such as EPROM,SDRAM,ADC & DACs,peripherals of microcontroller etcs.
+
+. The centre part is the processor,highlighted on the arduino board.
+
+. remaining part are the other components on board.
+
+
+
+
+
+
