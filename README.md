@@ -151,6 +151,18 @@ to get the result in % multiply by 100
 
 given statistics:
 
+![Screenshot (540)](https://github.com/gaurang-2626/Physical_design/assets/175235170/a8e9d847-38b4-4105-a241-67d9fae5fbd2)
+
+![Screenshot (549)](https://github.com/gaurang-2626/Physical_design/assets/175235170/8520bd24-1956-4b86-b18a-9185240a78bb)
+
+Number of D-ff=1613 & Total number of cells=14876
+
+therefore,Flop ratio=(1613/14876)=0.1084296853993
+
+Flop ration in  %=10.84296853993%
+
+### This marks the end od DAY 1
+
 
 
 
