@@ -161,7 +161,7 @@ therefore,Flop ratio=(1613/14876)=0.1084296853993
 
 Flop ration in  %=10.84296853993%
 
-### This marks the end od DAY 1
+### This marks the end of DAY 1
 
 
 
