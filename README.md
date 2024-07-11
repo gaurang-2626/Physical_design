@@ -58,6 +58,10 @@ The core consist of mainly two parts:-
 2)Macros:-macros" refer to pre-designed and pre-verified circuit blocks that are typically larger in size and complexity compared to IPs (Intellectual Properties). Macros are often complete functional units or subsystems that can be integrated into a chip design. Here are some key points about macros in VLSI:
 ![Screenshot (547)](https://github.com/gaurang-2626/Physical_design/assets/175235170/cfa97239-3d74-4b1d-9f9d-1a3934e1323b)
 
+The below given image depicts the RISCV architecture to implement a SOC.it show RTL2GDS flow.
+
+![day16](https://github.com/gaurang-2626/Physical_design/assets/175235170/98b81312-a479-443a-a6b8-92f9a7e066e1)
+
 
 
 
