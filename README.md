@@ -41,5 +41,16 @@ This image contains various interconnecting devices such as EPROM,SDRAM,ADC & DA
 
 
 
+####
+Now we will dive deep into the discussion and look forward towards processor,
+
+the image below depicts the processor.
+
+it has chip in the centre and connected to pins with the help of bond wires and interconnect wires.
+
+![Screenshot (546)](https://github.com/gaurang-2626/Physical_design/assets/175235170/4b7f0158-9645-4061-9f23-1ac9684c1ef8)
+
+
+
 
 
