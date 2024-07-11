@@ -13,6 +13,7 @@ Physical design refers to the phase in the process of creating computer chips wh
 
 5.Final steps for RTL2GDS flow.
 
+
 ## Authors
 
-- [Gaurang kumar Sharma]
+- [Gaurang kumar Sharma](https://www.linkedin.com/in/gaurang-sharma-983a6820a/?originalSubdomain=in)
