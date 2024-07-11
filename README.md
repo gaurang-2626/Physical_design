@@ -22,6 +22,8 @@ VSD-IAT cloud platform was used to provide acess to lectures.
 
 - [Gaurang kumar Sharma](https://www.linkedin.com/in/gaurang-sharma-983a6820a/?originalSubdomain=in)
 
+# DAY 1:-
+
 ## 1. Interaction with computers
 ![Screenshot (544)](https://github.com/gaurang-2626/Physical_design/assets/175235170/8999a1b1-e67d-4093-aa1e-8a8f91542592)
 
@@ -119,4 +121,33 @@ the last stage is the signoff checks that includes LVS & DRC.
 ![Screenshot (478)](https://github.com/gaurang-2626/Physical_design/assets/175235170/c6f83f37-4b18-42dd-ac7f-05874b3183f6)
 
 
+## Labs(DAY1) using Open source EDA tools:
+
+### STEP 1:
+Now we will begin our journey to implement PD using open source EDA tool,so far we have completed the ovierview and necessary theory regarding RTL2GDS flow.
+
+Go to the directory(work) where you will need to invoke the tool openlane.
+
+![Screenshot (530)](https://github.com/gaurang-2626/Physical_design/assets/175235170/9614b0a2-c45c-4dd8-bba6-049449aae27a)
+
+![Screenshot (531)](https://github.com/gaurang-2626/Physical_design/assets/175235170/54bb826f-0ef9-481a-9d23-85759ee5762b)
+
+### STEP 2:
+after invoking the openlane tool,we need to work in interactive mode & under design list we have to use picorv32a
+
+![Screenshot (533)](https://github.com/gaurang-2626/Physical_design/assets/175235170/2d596022-6101-4ed8-8ddd-01f37a23ca70)
+
+### STEP 3:
+Now we need to perform synthesis using run_synthesis command.
+
+![Screenshot (536)](https://github.com/gaurang-2626/Physical_design/assets/175235170/6f50701d-06c5-4997-b90d-272713f3317f)
+
+### STEP 4:
+Next crucial step is to calculate the flop ratio.
+
+formaula:(number of D-ff/Total number of cells)
+
+to get the result in % multiply by 100
+
+given statistics:
 
