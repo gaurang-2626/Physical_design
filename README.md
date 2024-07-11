@@ -151,3 +151,7 @@ to get the result in % multiply by 100
 
 given statistics:
 
+
+
+
+
