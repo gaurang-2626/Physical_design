@@ -3,7 +3,7 @@ Physical design refers to the phase in the process of creating computer chips wh
 
 
 ## WORKSHOP FLOW:-
-1.Intro to open soure eda tool(openlane) and PDK(skywater130nm).
+1.Introduction to open source eda tool(openlane) and PDK(skywater130nm).
 
 2.Floorplanning and Powerplanning.
 
