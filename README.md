@@ -85,3 +85,38 @@ the flow diagram of RTL2GDS is shown below with complete information.
 ![Screenshot (466)](https://github.com/gaurang-2626/Physical_design/assets/175235170/d19df1b5-aad5-4ae5-b5f2-854126ae8d8a)
 
 
+Synthesis is the process of converting a high-level hardware description into a lower-level representation that can be implemented on a silicon chip. This involves transforming the abstract design, written in a hardware description language (HDL), into a gate-level netlist, which is a description of the circuit in terms of logic gates and their connections.
+
+![Screenshot (467)](https://github.com/gaurang-2626/Physical_design/assets/175235170/894071cc-57a7-4b1c-848a-ed3bcb9e6e86)
+
+Floorplanning is the process of defining the size, shape, and placement of various blocks and modules within a chip. It is an essential step that sets the foundation for the placement and routing of a VLSI design.
+
+Power planning is the process of designing the power distribution network within a chip to ensure that all parts of the circuit receive stable and adequate power.
+
+![Screenshot (469)](https://github.com/gaurang-2626/Physical_design/assets/175235170/61bfc5f1-26fb-40d5-87a7-292acac0f941)
+
+![Screenshot (471)](https://github.com/gaurang-2626/Physical_design/assets/175235170/c8bd9b10-870e-4f1a-8967-6b0edc80264c)
+
+Placement is the process of determining the exact locations of standard cells, macros, and other circuit components within the chip area defined during floorplanning. This step is crucial for optimizing the chip's performance, power consumption, and manufacturability.
+
+it is of 2 types:Global and Detailed Placement
+
+![Screenshot (472)](https://github.com/gaurang-2626/Physical_design/assets/175235170/d4f71eb2-84a0-43c0-9f0e-0d0e70fb9f3d)
+
+![Screenshot (474)](https://github.com/gaurang-2626/Physical_design/assets/175235170/537cb2a8-6cbc-40dc-bc9f-68e77c21aaef)
+
+
+Clock Tree Synthesis (CTS) is a critical step in the physical design phase . CTS is responsible for designing and optimizing the clock distribution network to ensure that the clock signal reaches all sequential elements (flip-flops and latches) with minimal skew and optimal timing.
+
+![Screenshot (475)](https://github.com/gaurang-2626/Physical_design/assets/175235170/7c94939c-3530-4cd8-9655-718f927c16e5)
+
+Routing is a key step in the physical design phase. After placement and Clock Tree Synthesis (CTS), routing involves creating the physical connections between the various components (standard cells, macros, I/O pins, etc.) on the chip. This step ensures that the electrical signals can travel between the components as needed.
+
+![Screenshot (476)](https://github.com/gaurang-2626/Physical_design/assets/175235170/278d1e5f-de83-4b7e-8b11-a7fc5712a746)
+
+the last stage is the signoff checks that includes LVS & DRC.
+
+![Screenshot (478)](https://github.com/gaurang-2626/Physical_design/assets/175235170/c6f83f37-4b18-42dd-ac7f-05874b3183f6)
+
+
+
