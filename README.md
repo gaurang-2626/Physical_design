@@ -62,6 +62,26 @@ The below given image depicts the RISCV architecture to implement a SOC.it show 
 
 ![day16](https://github.com/gaurang-2626/Physical_design/assets/175235170/98b81312-a479-443a-a6b8-92f9a7e066e1)
 
+Moving forward we look into how the application software or apps interact with the hardware.
 
+we are actually unaware of what goes in backend,so this image shows the exact flow of information from app to hardware.
+
+![Screenshot (440)](https://github.com/gaurang-2626/Physical_design/assets/175235170/992c1fe2-b134-4ae0-88e9-06e98f24452b)
+
+taking an example of stopwatch this can be explained in an easy way.
+
+![Screenshot (444)](https://github.com/gaurang-2626/Physical_design/assets/175235170/946d4394-7f9e-4388-b918-621d3e8a8ac2)
+
+conversion of binary code into HDL is done which gives information about functionality of the the program.
+
+in next step RTL is syntesized and we perform Physical design of obtained netlist.
+
+![Screenshot (449)](https://github.com/gaurang-2626/Physical_design/assets/175235170/d5c5d452-101b-4af8-89e6-e3d480ea15ad)
+
+## SOC Design and Openlane
+
+the flow diagram of RTL2GDS is shown below with complete information.
+
+![Screenshot (466)](https://github.com/gaurang-2626/Physical_design/assets/175235170/d19df1b5-aad5-4ae5-b5f2-854126ae8d8a)
 
 
