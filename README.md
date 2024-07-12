@@ -9,7 +9,7 @@ VSD-IAT cloud platform was used to provide acess to lectures.
 ## WORKSHOP FLOW:-
 1.Introduction to open source eda tool(openlane) and PDK(skywater130nm).
 
-2.Floorplanning and Powerplanning.
+2.Floorplan and Powerplan.
 
 3.cell design using Magic Layout and Ngspice characterization.
 
@@ -162,6 +162,64 @@ therefore,Flop ratio=(1613/14876)=0.1084296853993
 Flop ration in  %=10.84296853993%
 
 ### This marks the end of DAY 1
+
+# DAY 2
+## Floorplan & Powerplan
+in this module we will study about Floorplan & Powerplan,we begin with creating the netlist,definding width & height of core and die area.
+below image shows the netlisting of ffs and gates.
+![Screenshot (550)](https://github.com/user-attachments/assets/56379166-69d7-4284-81dd-af8b226b99f2)
+
+now convert the netlist into physical dimensions.
+gates are also converted as shown by boxes below.
+![Screenshot (551)](https://github.com/user-attachments/assets/fcdae878-a1ba-4852-8651-44728f5bc795)
+
+the measurement of cells anf ffs for calculation of core is necessary as depicted below.
+Die consist of core,it is the part on which chip is fabricated.
+![Screenshot (553)](https://github.com/user-attachments/assets/b3e59687-1608-4b27-b1f2-c91ec5e2285b)
+
+two important parameters with respect to core & die are:
+
+a)utilization factor
+
+b)aspect ratio
+![Screenshot (560)](https://github.com/user-attachments/assets/5884ee6a-8208-4f38-8576-6ed7d8ee4df3)
+
+#### Importance of Floorplanning
+Performance: Proper floorplanning can minimize the signal propagation delay and improve the overall performance of the chip.
+
+Power Consumption: A well-planned floorplan can reduce power consumption by minimizing the length of interconnects.
+
+Area Utilization: Efficient floorplanning ensures optimal usage of the available silicon area, reducing the chip size and cost.
+
+Thermal Management: Distributing the heat-generating components evenly can prevent hotspots and improve the thermal performance of the chip.
+
+####  Importance of Powerplanning
+Voltage Stability:
+Ensures stable supply voltage across the entire chip.
+Prevents voltage drops that could cause circuit malfunction.
+
+Performance Optimization:
+Reduces IR drops, ensuring circuits operate at their intended speeds.
+Minimizes timing variations caused by power supply fluctuations.
+
+Power Integrity:
+Maintains power supply noise within acceptable limits.
+Prevents noise-induced signal integrity issues and functional errors.
+
+![Screenshot (598)](https://github.com/user-attachments/assets/4a24a2f6-6748-4d7b-9428-dee868798e26)
+
+the final pin placement on core of die can be depicted as below:
+
+![Screenshot (606)](https://github.com/user-attachments/assets/5f0834cf-f880-40ea-a624-7e8ea60ee4c0)
+
+the cell placement blockage is used to block the area between core and die such that no other std.cells or any other placement takes place in that area.this area is reserved only for IO pins.
+![Screenshot (607)](https://github.com/user-attachments/assets/6fe8631c-d5a9-4a29-a09e-f2aa1cd2865a)
+
+
+
+
+
+
 
 
 
