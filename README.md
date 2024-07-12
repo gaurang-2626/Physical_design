@@ -319,3 +319,49 @@ move to the designated directory as shown in below image and invoke the magic fo
 ![Screenshot (666)](https://github.com/user-attachments/assets/456e970d-3ec6-46a6-9993-d343cdcb93fa)
 
 ![Screenshot (724)](https://github.com/user-attachments/assets/02bc5def-2d6a-4d9a-af0b-bace2d474421)
+
+## Cell design flow
+
+library contains different types of standard cells,also cells with same name but different shapes are considered as different.
+
+![Screenshot (669)](https://github.com/user-attachments/assets/84e5aa09-842b-43b7-897e-86288802b9cc)
+
+the below image depicts the cell design flow
+
+![Screenshot (671)](https://github.com/user-attachments/assets/3db9570a-93e4-4866-9829-f6e45ce28f2f)
+
+the characterization flow has total of 8 steps and they ae processed by software GUNA,the result of this software is timing,noise,power information of the circuit
+
+![Screenshot (701)](https://github.com/user-attachments/assets/7b1151b7-b23a-4881-b617-e55a6e81b2f0)
+![Screenshot (700)](https://github.com/user-attachments/assets/26113516-59ac-4380-9e28-27e137a3906e)
+![Screenshot (705)](https://github.com/user-attachments/assets/34fd5a20-10e3-45ee-b056-dd2c3dae0db3)
+
+## Timing parameters & consideration
+
+taking the case of buffer,input is applied on it.various analysis are taken into consideration for input and output slew rates,I/P & O/P rise and fall times.
+
+![Screenshot (707)](https://github.com/user-attachments/assets/afbafa58-d301-4577-811f-bf62859abd7a)
+![Screenshot (708)](https://github.com/user-attachments/assets/ec64a80d-fed1-4ac9-a188-49cf3b46a353)
+![Screenshot (709)](https://github.com/user-attachments/assets/e6a6f973-bc51-4e5d-96b4-67901de9abe1)
+![Screenshot (710)](https://github.com/user-attachments/assets/0a99c08e-9ec7-449b-b818-ccb4aea44e7a)
+![Screenshot (711)](https://github.com/user-attachments/assets/7ba78161-6c2f-49ef-b191-973fb41149e6)
+![Screenshot (712)](https://github.com/user-attachments/assets/ae61490b-dc0d-4318-9bea-86eee4e9a302)
+![Screenshot (713)](https://github.com/user-attachments/assets/07e48a35-8db8-4c64-a299-377c8651e874)
+![Screenshot (714)](https://github.com/user-attachments/assets/444a4097-e81d-4cd2-9a21-99dc4892a5e8)
+
++ve propagation delay:
+![Screenshot (718)](https://github.com/user-attachments/assets/ac961865-acd4-4e18-916d-5a3acfc76cfa)
+
+-ve propagation delay:
+![Screenshot (719)](https://github.com/user-attachments/assets/ad93fb39-0825-47ba-8758-4d59774dfe2d)
+
+I/P transition time:
+![Screenshot (721)](https://github.com/user-attachments/assets/276bdccf-349e-42a7-93e1-03d0d2eaa46d)
+
+O/P transition time:
+![Screenshot (722)](https://github.com/user-attachments/assets/9cb8d065-c1d0-4666-b92f-73836a790068)
+
+transition delay:
+![Screenshot (723)](https://github.com/user-attachments/assets/a28705fb-9164-4482-a979-64fe075b6a67)
+
+### This marks the end of DAY 2.
