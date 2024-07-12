@@ -121,7 +121,7 @@ the last stage is the signoff checks that includes LVS & DRC.
 ![Screenshot (478)](https://github.com/gaurang-2626/Physical_design/assets/175235170/c6f83f37-4b18-42dd-ac7f-05874b3183f6)
 
 
-## Labs(DAY1) using Open source EDA tools:
+## Lab(DAY1) using Open source EDA tools:
 
 ### STEP 1:
 Now we will begin our journey to implement PD using open source EDA tool,so far we have completed the ovierview and necessary theory regarding RTL2GDS flow.
@@ -214,6 +214,27 @@ the final pin placement on core of die can be depicted as below:
 
 the cell placement blockage is used to block the area between core and die such that no other std.cells or any other placement takes place in that area.this area is reserved only for IO pins.
 ![Screenshot (607)](https://github.com/user-attachments/assets/6fe8631c-d5a9-4a29-a09e-f2aa1cd2865a)
+
+## LAB(DAY2) Floorplan:
+
+### STEP 1:
+use the command run_floorplan to execute the floorplan,it will take 4 to 5 minutes to execute this commmand
+
+![Screenshot (616)](https://github.com/user-attachments/assets/dfa09d33-fd3f-4513-b343-e06453cd45a7)
+
+### STEP 2:
+the floorplan def file would be created,which can be read using less command
+
+![Screenshot (618)](https://github.com/user-attachments/assets/eec85024-1b89-41c6-8af1-74513e093cd7)
+
+### STEP 3:
+Now to visually verify the created floorplan we use magic tool(to view layout),following command is used as shown in below image,this would lead to pop up of magic window where we can realise our floorpan.
+
+![Screenshot (627)](https://github.com/user-attachments/assets/dfb652c5-588e-4598-adfb-7e056524ca94)
+![Screenshot (631)](https://github.com/user-attachments/assets/fe83a730-a1db-419d-b323-0ca80f6da6ba)
+![Screenshot (632)](https://github.com/user-attachments/assets/d816f7ef-1e52-4753-bdf3-6fdafcf14d6a)
+![Screenshot (633)](https://github.com/user-attachments/assets/982696bf-6485-48fd-9c68-caba23d89a0c)
+
 
 
 
