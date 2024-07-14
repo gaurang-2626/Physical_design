@@ -463,7 +463,7 @@ the rise delay tie is calculated for 50% of input and output as shown below:
 
 rise delay=2.21026e-09 - 2.15e-09=60.26ps
 
-#### LEF file formation
+#### LEF file formation:
 after completing the analysis of inverter we create a LEF file using the command:
 
 wget http://opencircuitdesign.com/open_pdks/archive/drc_test.tgz
@@ -480,23 +480,34 @@ we begin our observation we met3.mag file,we can open it from tab 'open' fiven i
 ![Screenshot (876)](https://github.com/user-attachments/assets/4e1c06f1-76f6-42fd-a6e3-2e5533cb94ed)
 ![Screenshot (875)](https://github.com/user-attachments/assets/e7916d47-d5de-4c16-9e45-b168667f2fb1)
 
-#### poly 9 error fixation
+### Poly 9 error fixation:
 
 ![Screenshot (881)](https://github.com/user-attachments/assets/f4327ad2-7794-4435-abef-66d8a6ffe256)
+
 ![Screenshot (882)](https://github.com/user-attachments/assets/1b292b84-3385-42d6-af99-8006098be4cb)
 
 make the necessary changes to the sky130A.tech file and load the updated tech file in tkcon window,after doing so run the drc checks again,these steps are illustrated using the below given images:
 
 ![Screenshot (886)](https://github.com/user-attachments/assets/242010c2-cb41-4bc4-8d39-97bf80801d14)
+
 ![Screenshot (889)](https://github.com/user-attachments/assets/5fe5a7e6-3947-4c35-8194-d3a48f58d007)
+
 ![Screenshot (890)](https://github.com/user-attachments/assets/75762b30-2575-4e39-a344-1ed8765c610c)
+
 ![Screenshot (893)](https://github.com/user-attachments/assets/f2b73b9c-28cd-4739-85bd-d4a81a8fbce3)
 
 
+### n_well missing rule:
 
+![Screenshot (895)](https://github.com/user-attachments/assets/c8a727ca-58bd-4d6b-ac52-411a6af9151e)
 
+![Screenshot (900)](https://github.com/user-attachments/assets/167a7564-0718-45ee-8cef-cf633ac160ed)
 
+make necessary changes in the tech file as shown in given image below,reload the tech file in tkcon window and again perform the designated operation of drc
 
+![Screenshot (909)](https://github.com/user-attachments/assets/938b5d13-6e30-4cb6-9593-587b04c4a5ba)
 
+![Screenshot (906)](https://github.com/user-attachments/assets/93b00bc4-3134-40bf-90de-dced3d25bc36)
 
+![Screenshot (911)](https://github.com/user-attachments/assets/8ebc2710-ae85-47c3-8da9-cfd04a7637de)
 
