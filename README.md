@@ -395,7 +395,7 @@ Now the magic layout would appear:-
 
 ![Screenshot (835)](https://github.com/user-attachments/assets/8f45ca20-5d9e-4f2f-9135-fa0c96eec23d)
 
-## CMOS inverter analysis
+## CMOS inverter study with Magic & LAB related to Tech files
 
 in this part we deal with the analysis of CMOS inverter.we find out which layer is present at the gate,nwell,drain,connectivity between drain of nmos and pmos,
 source connection of nmos & pmos etc.
@@ -417,5 +417,86 @@ ext2spice
 
 illustration:
 ![Screenshot (846)](https://github.com/user-attachments/assets/5ff5e569-7e67-4c58-a491-be0db0c5e39f)
+
+this would result in the formation of sky130_inv.spice file.
+
+now open the spice file either using vim editor or nano.
+
+command to open file:'nano sky130_inv.spice'
+
+I had used nano here.and dont forget to make changes to the obtained file as per the desired circuitry.
+
+![Screenshot (847)](https://github.com/user-attachments/assets/5c6bd90e-cdca-4c75-95eb-8c7e99723507)
+
+Now run the spice simulation using the command:
+
+'ngspice sky130_inv.spice'
+
+if ngspice is not installed then first install it using the command:
+
+'sudo apt get install ngspice'
+
+![Screenshot (848)](https://github.com/user-attachments/assets/4fb07b30-a2cf-4cc3-b4fa-1881c96c6865)
+
+Now,we will analyse the plot of output vs time curve to find out the rise and fall transition time,as well as rise and fall delay time.
+
+Transition time refers to the time it takes for a signal to change from one logic level to another
+
+Delay time refers to the time it takes for a signal to propagate through a circuit or a specific gate
+
+command:'plot y vs time a'
+
+![Screenshot (850)](https://github.com/user-attachments/assets/e54c4775-767d-491f-9e93-e4d9727b543c)
+
+transition points for rise time at 20% and 80% are shown in below given image:
+
+![Screenshot (919)](https://github.com/user-attachments/assets/d5f7c0d7-6eb4-4a1f-b5d2-53cc134f554b)
+
+
+Rise transition time=2.24479e-09 - 2.18167e-09=63.12ps
+
+similarly we can calculate  fall transition time points from 80% and 80%.
+
+the rise delay tie is calculated for 50% of input and output as shown below:
+
+![Screenshot (920)](https://github.com/user-attachments/assets/816cd71d-82c1-4633-acd6-289a8dec894c)
+
+rise delay=2.21026e-09 - 2.15e-09=60.26ps
+
+#### LEF file formation
+after completing the analysis of inverter we create a LEF file using the command:
+
+wget http://opencircuitdesign.com/open_pdks/archive/drc_test.tgz
+
+'tar xfz drc_test.tgz'
+
+![Screenshot (860)](https://github.com/user-attachments/assets/4d6fd150-9cab-4b70-816b-f14440a167bb)
+
+after creaion of LEF,we open magic tool in the same folder where we have stored drc_test file using command:'magic -d XR'
+
+we begin our observation we met3.mag file,we can open it from tab 'open' fiven in magic tool or through tkcon window by writing command:'load met3.mag'
+
+![Screenshot (864)](https://github.com/user-attachments/assets/30892ae6-a704-4bd3-9a59-5a9ad95b83be)
+![Screenshot (876)](https://github.com/user-attachments/assets/4e1c06f1-76f6-42fd-a6e3-2e5533cb94ed)
+![Screenshot (875)](https://github.com/user-attachments/assets/e7916d47-d5de-4c16-9e45-b168667f2fb1)
+
+#### poly 9 error fixation
+
+![Screenshot (881)](https://github.com/user-attachments/assets/f4327ad2-7794-4435-abef-66d8a6ffe256)
+![Screenshot (882)](https://github.com/user-attachments/assets/1b292b84-3385-42d6-af99-8006098be4cb)
+
+make the necessary changes to the sky130A.tech file and load the updated tech file in tkcon window,after doing so run the drc checks again,these steps are illustrated using the below given images:
+
+![Screenshot (886)](https://github.com/user-attachments/assets/242010c2-cb41-4bc4-8d39-97bf80801d14)
+![Screenshot (889)](https://github.com/user-attachments/assets/5fe5a7e6-3947-4c35-8194-d3a48f58d007)
+![Screenshot (890)](https://github.com/user-attachments/assets/75762b30-2575-4e39-a344-1ed8765c610c)
+![Screenshot (893)](https://github.com/user-attachments/assets/f2b73b9c-28cd-4739-85bd-d4a81a8fbce3)
+
+
+
+
+
+
+
 
 
