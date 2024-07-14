@@ -11,7 +11,7 @@ VSD-IAT cloud platform was used to provide acess to lectures.
 
 2.Floorplan and Powerplan.
 
-3.cell design using Magic Layout and Ngspice characterization.
+3.Cell design using Magic Layout and Ngspice characterization.
 
 4.Pre-layout timing analysis and importance to good clock tress(i.e minimum skewness).
 
@@ -24,7 +24,7 @@ VSD-IAT cloud platform was used to provide acess to lectures.
 
 # DAY 1:-
 
-## 1. Interaction with computers
+## Interaction with computers
 ![Screenshot (544)](https://github.com/gaurang-2626/Physical_design/assets/175235170/8999a1b1-e67d-4093-aa1e-8a8f91542592)
 
 This is arduino uno board,the encircled part is the processor which we are concerned about.
@@ -365,3 +365,57 @@ transition delay:
 ![Screenshot (723)](https://github.com/user-attachments/assets/a28705fb-9164-4482-a979-64fe075b6a67)
 
 ### This marks the end of DAY 2.
+
+# DAY 3
+## cell design using Magic Layout and Ngspice characterization.
+
+## LAB(DAY 3) for CMOS inverter.
+
+first we begin with the IO placer experiment,we change the IO PINS of the macro by making changes in the floorplan def file.
+the change we made is shown below in the image given & after this we ran the floorplan again,we observed that the pins are no more equidistant.
+![Screenshot (916)](https://github.com/user-attachments/assets/792f82e8-49f1-459b-8fa4-0df00618ba2a)
+
+floorplan after making changes in floorplan def file
+
+![Screenshot (917)](https://github.com/user-attachments/assets/83fc385e-681f-450f-a58b-b0b25a3c1656)
+
+a "SPICE deck" refers to a file that contains a netlist and simulation commands for SPICE (Simulation Program with Integrated Circuit Emphasis). SPICE is a powerful tool used for simulating and analyzing the performance of analog and mixed-signal circuits.
+
+![Screenshot (736)](https://github.com/user-attachments/assets/fa94e701-427b-4a22-9a40-feef3b938738)
+
+we do the cloning of the inverter layout by copying the link from github repository of Mr.nickson by using command as wriiten below:
+
+git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+
+Go to the vsdstdcelldesign directory and invoke the magic tool to observe the layout of CMOS inverter.
+
+![Screenshot (837)](https://github.com/user-attachments/assets/ca6afb9f-77c1-4c46-bd05-1fcc40ddda5a)
+
+Now the magic layout would appear:-
+
+![Screenshot (835)](https://github.com/user-attachments/assets/8f45ca20-5d9e-4f2f-9135-fa0c96eec23d)
+
+## CMOS inverter analysis
+
+in this part we deal with the analysis of CMOS inverter.we find out which layer is present at the gate,nwell,drain,connectivity between drain of nmos and pmos,
+source connection of nmos & pmos etc.
+
+the below image describes the whole process:
+
+![Screenshot (838)](https://github.com/user-attachments/assets/65b76604-c05a-4e75-bcba-703e6c3e8dbc)
+![Screenshot (839)](https://github.com/user-attachments/assets/97f26c20-29b6-430e-9677-1968c2ac2f7a)
+![Screenshot (840)](https://github.com/user-attachments/assets/bdacd3de-7976-4079-b762-7ad110b858af)
+![Screenshot (841)](https://github.com/user-attachments/assets/8ca93604-d376-4ed0-a73d-fd3be35cc987)
+![Screenshot (842)](https://github.com/user-attachments/assets/872e0732-9eea-4c63-aafe-aedcea8aa17c)
+![Screenshot (843)](https://github.com/user-attachments/assets/f85e8e3a-8796-4cf7-b636-bc85b6132e80)
+
+use the command 'extract all' in the tkcon window of magic.
+
+after this use 'ext2spice cthresh 0 rthresh 0'
+
+ext2spice
+
+illustration:
+![Screenshot (846)](https://github.com/user-attachments/assets/5ff5e569-7e67-4c58-a491-be0db0c5e39f)
+
+
