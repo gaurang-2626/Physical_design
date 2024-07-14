@@ -472,7 +472,7 @@ wget http://opencircuitdesign.com/open_pdks/archive/drc_test.tgz
 
 ![Screenshot (860)](https://github.com/user-attachments/assets/4d6fd150-9cab-4b70-816b-f14440a167bb)
 
-after creaion of LEF,we open magic tool in the same folder where we have stored drc_test file using command:'magic -d XR'
+after creation of LEF,we open magic tool in the same folder where we have stored drc_test file using command:'magic -d XR'
 
 we begin our observation we met3.mag file,we can open it from tab 'open' fiven in magic tool or through tkcon window by writing command:'load met3.mag'
 
