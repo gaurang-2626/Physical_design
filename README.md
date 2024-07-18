@@ -661,6 +661,9 @@ these are being performed to get the desired positive slack which we have alread
 ### Routing in VLSI
 Routing is the process of creating the physical connections between the various components (such as transistors, resistors, capacitors) in a VLSI design. This step follows placement, where the positions of these components are determined.
 
+![routing](https://github.com/user-attachments/assets/f71ec2d7-0a32-41ae-98bb-9ca57550e06c)
+
+
 #### Key Aspects of Routing:
 Global Routing:
 
@@ -710,3 +713,43 @@ DRC Workflow:
 Rule Definition: The foundry provides a set of rules based on the manufacturing process.
 Layout Verification: The layout is checked against these rules using DRC tools.
 Error Correction: Any violations found are corrected by the designers, and the layout is re-verified.
+
+## LAB(DAY 5)
+
+after cts we need to perform these command for the openlane which are as follows:
+
+docker
+
+./flow.tcl -interactive
+
+package require openlane 0.9
+
+prep -design picorv32a -tag 15_07-16-43 
+
+![Screenshot (1121)](https://github.com/user-attachments/assets/c4d02435-1f16-46e8-ab61-4772a1bc26d7)
+
+To generate power distribution network use the comand:
+
+gen_pdn
+
+![Screenshot (1123)](https://github.com/user-attachments/assets/2b9a40af-d285-45b9-9bcf-630335c372a5)
+
+to perform routing using TritonRoute, the following command is performed:
+
+run_routing,this command will take some time to execute as it remove violations in number of iterations.
+
+![Screenshot (1133)](https://github.com/user-attachments/assets/691b18ed-ce3b-4143-900b-2fca0092ba5c)
+
+use the magic layout command to view the final design.
+
+![Screenshot (1134)](https://github.com/user-attachments/assets/ab11c46c-6385-4e07-8785-e3e98e55aea2)
+
+![Screenshot (1140)](https://github.com/user-attachments/assets/e98574fb-7655-42c2-97d7-e4937c37c8ab)
+
+use the shotwell tool to open the .png or image file of the picorv32a
+
+command:
+
+shotwell picorv32.def.png
+
+![Screenshot (1142)](https://github.com/user-attachments/assets/4827f205-faf8-4620-830a-820f25325557)
