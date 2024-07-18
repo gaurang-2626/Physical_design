@@ -511,3 +511,129 @@ make necessary changes in the tech file as shown in given image below,reload the
 
 ![Screenshot (911)](https://github.com/user-attachments/assets/8ebc2710-ae85-47c3-8da9-cfd04a7637de)
 
+# DAY 4
+## Pre-layout timing analysis and importance to good clock tree
+### Time modelling:
+Time modeling in VLSI (Very Large Scale Integration) is a crucial aspect of the design and analysis of integrated circuits (ICs). It involves predicting and optimizing the timing behavior of the circuit to ensure it meets performance and reliability requirements.
+ Here,we talk about time modelling using delay tables & also conversion of grid info to track info.
+we also convert the magic layout to stdandard cell LEF.
+
+path for track info:
+
+cd openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/less_tracks.info
+
+now open magic using command:
+
+magic -T sky130A.tech sky130_inv.mag &
+
+![Screenshot (959)](https://github.com/user-attachments/assets/cdf8b3df-2ea1-473f-9a14-d5a17b70b9ef)
+
+![Screenshot (932)](https://github.com/user-attachments/assets/775e5c32-a0c3-4a4e-8b40-47325ed1a93d)
+
+the tracks.info file would be opened.
+
+we observe that the IP & OP ports are present on the intersection of X and Y pitches.now convert the magic layout to std cells LEF File.
+
+% save sky130_vsdinv.mag
+
+![Screenshot (941)](https://github.com/user-attachments/assets/cd181824-8c45-454d-a54d-9dfd13382dbb)
+
+the layout of the copied cell is present which is to be converted into the LEF file with the use of command:
+
+% lef write
+
+![Screenshot (960)](https://github.com/user-attachments/assets/581e5388-9340-46b1-bcac-497c496c20e2)
+
+now the .mag and .lef files will be created at the designated location.
+
+LEF file:
+![Screenshot (961)](https://github.com/user-attachments/assets/63524bb6-ef1f-478d-b942-11ad92bcfcc7)
+
+now make changes to config.tcl file given below:
+![Screenshot (955)](https://github.com/user-attachments/assets/2c55f612-a06e-4f76-b23c-457db563cdcf)
+
+changes:
+
+ set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+
+ set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+ set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib" 
+
+ set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+
+ set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+
+ now,perform the synthesis again using run_synthesis:
+
+ there would be huge negative slack present which need to be removed by making changes to the various parameters
+
+ commands before synthesis:
+
+ docker
+
+ ./flow.tcl -interactive
+
+prep -design picorv32a -tag 15-07_13-35 -overwrite
+
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+
+add_lefs -src $lefs
+
+run_synthesis
+
+![Screenshot (972)](https://github.com/user-attachments/assets/6164fe47-7c93-4260-acf2-862cc3683c1e)
+
+to fix the slag make the following changes:
+
+![Screenshot (998)](https://github.com/user-attachments/assets/3f39a0de-c6ab-4f65-941a-23220d1f8eec)
+
+again perform  run_synthesis,this time we observe that the slack has been removed.
+
+![Screenshot (1000)](https://github.com/user-attachments/assets/613a97d2-3f53-483d-9221-0feca1312661)
+
+now,we will run floorplan,but we observe that when we we run_floorplan we will be getting error.
+
+therefore we use:
+
+init_floorplan
+
+place_io
+
+tap_decap_or
+
+![Screenshot (1007)](https://github.com/user-attachments/assets/00f3aae9-460e-4afa-bccf-088444727c5f)
+
+now we will perform placement,using run_placement:
+
+![Screenshot (1014)](https://github.com/user-attachments/assets/e6458b34-2e5a-4f58-9bf6-1ea47cb5bad1)
+
+using magic tool we can view the layout of the obtained design after placement:
+
+![Screenshot (1018)](https://github.com/user-attachments/assets/d24ef9da-d92d-4970-adad-defdf1455d72)
+
+### Post synthesis analysis using openSTA.
+
+we need to create pre_sta.conf and my_base.sdc , as it is not present initially.I am using nano to create this file.
+
+![dd2](https://github.com/user-attachments/assets/9c39c373-0d92-4431-81e5-334160d1a6ec)
+
+![dd](https://github.com/user-attachments/assets/589f2c32-dc11-45e7-ac64-bfa643a6567e)
+
+perform the command:
+
+sta pre_sta.conf
+
+![Screenshot (1038)](https://github.com/user-attachments/assets/1e803edd-8d55-4ab6-a44d-e4b4a95eac9f)
+
+![Screenshot (1039)](https://github.com/user-attachments/assets/5858ec12-2ead-449f-b79c-760b176e0168)
+
+slack is met,as it is positive we can proceed with the flow,but then also we can perform synthesis again,
+
+run_synthesis,we again perform synthesis and observe the obtained slack.
+
+the slack is met
+
+![Screenshot (1043)](https://github.com/user-attachments/assets/cf7306bd-5624-4944-a50a-03fe0262abae)
+
+
+
