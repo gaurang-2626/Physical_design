@@ -635,5 +635,78 @@ the slack is met
 
 ![Screenshot (1043)](https://github.com/user-attachments/assets/cf7306bd-5624-4944-a50a-03fe0262abae)
 
+after the synthesis,floorplan & placement stage now we need to perform the CTS(clock tree synthesis) stage and observe the obtained slack whether it si favourable or not.
 
+use the command:
 
+run_cts
+
+![Screenshot (1075)](https://github.com/user-attachments/assets/d190c9e6-c4f5-4553-ab15-86867bf7d86b)
+
+now,invoke the openroad using the command:
+
+openroad
+
+perform various operations of read_def,read_lef,read_db,write_db etc.
+
+these are being performed to get the desired positive slack which we have already obtained and we would verify it here again performing sta.
+
+![Screenshot (1112)](https://github.com/user-attachments/assets/e58b0438-b1d7-4eff-9461-9f7c02aad52b)
+
+![Screenshot (1120)](https://github.com/user-attachments/assets/dfcfece2-a142-483a-a602-36eb840c978b)
+
+# DAY 5
+## Final step for RTL2GDS Flow
+
+### Routing in VLSI
+Routing is the process of creating the physical connections between the various components (such as transistors, resistors, capacitors) in a VLSI design. This step follows placement, where the positions of these components are determined.
+
+#### Key Aspects of Routing:
+Global Routing:
+
+Determines the general paths that the interconnections will take across the chip. It divides the chip into a grid and assigns routes to different grid cells without specifying the exact details of the paths.
+Detailed Routing:
+
+Specifies the exact paths for each wire at the transistor level. It defines the precise geometries and layers to be used for each connection, ensuring that they do not interfere with each other.
+
+#### Routing Algorithms:
+
+Maze Routing: A popular algorithm for finding paths between two points on a grid by exploring all possible routes and selecting the optimal one.
+Channel Routing: Used when the routing area is divided into channels, focusing on routing within these constrained regions.
+
+#### Routing Layers:
+
+Modern VLSI designs use multiple metal layers for routing. Lower layers are typically used for local interconnections, while higher layers are reserved for global connections due to their lower resistance and capacitance.
+
+#### Routing Challenges:
+
+Congestion: Ensuring that the routing paths do not become too crowded, which can lead to performance degradation and manufacturability issues.
+
+Crosstalk: Minimizing the interference between adjacent signal paths
+.
+Delay: Managing the propagation delay of signals to ensure that timing constraints are met.
+
+### Design Rule Checking (DRC) in VLSI
+DRC is a verification process that ensures the physical layout of a VLSI design adheres to a set of predefined manufacturing rules provided by the semiconductor foundry. These rules are crucial for ensuring the design can be manufactured reliably.
+
+### Key Aspects of DRC:
+Design Rules:
+
+Minimum Width: Ensures that the width of any feature (such as a wire or transistor gate) is not less than a specified minimum value.
+
+Minimum Spacing: Ensures that the distance between adjacent features meets the minimum required spacing to prevent electrical shorts or crosstalk.
+
+Enclosure and Overlap: Ensures that certain features overlap or enclose others adequately to ensure proper connectivity and functionality.
+
+### Types of DRC Checks:
+
+Geometric Checks: Verify the dimensions and spacing of physical features.
+
+Connectivity Checks: Ensure that all intended connections are made correctly and there are no unintended shorts.
+
+Electrical Checks: Verify that the layout meets the electrical performance criteria, such as resistance and capacitance limits.
+DRC Workflow:
+
+Rule Definition: The foundry provides a set of rules based on the manufacturing process.
+Layout Verification: The layout is checked against these rules using DRC tools.
+Error Correction: Any violations found are corrected by the designers, and the layout is re-verified.
