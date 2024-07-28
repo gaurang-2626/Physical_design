@@ -479,6 +479,7 @@ we begin our observation we met3.mag file,we can open it from tab 'open' fiven i
 ![Screenshot (864)](https://github.com/user-attachments/assets/30892ae6-a704-4bd3-9a59-5a9ad95b83be)
 ![Screenshot (876)](https://github.com/user-attachments/assets/4e1c06f1-76f6-42fd-a6e3-2e5533cb94ed)
 ![Screenshot (875)](https://github.com/user-attachments/assets/e7916d47-d5de-4c16-9e45-b168667f2fb1)
+![SC](https://github.com/user-attachments/assets/0b84bae2-9dd6-4891-a220-dc7a7f05c15b)
 
 ### Poly 9 error fixation:
 
